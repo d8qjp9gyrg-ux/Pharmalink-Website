@@ -5,3 +5,18 @@
 <p dir="rtl">تشتت المريض وضياع وقته في البحث عن الدواء بين الصيدليات المختلفة</p>
 <h2 dir="rtl">الحل المقترح.٥ (The Solution)</h2>
 <p dir="rtl">محرك بحث موحد يوضح للمستخدم اماكن توفر الدواء في الصيدليات لحظيا</p>
+<div dir="rtl" style="text-align:center;margin-top:40px;padding:20px;border:2px solid #eee;border-radius:10px;">
+<h3>ابحث عن توفر الدواء:</h3>
+<input type="text" id="medlnput"placeholder="ادخل اسم الدواء هنا ..."style="padding:10px;width:60%;border-radius:5px;border:1px solid #ccc;">
+<button id="searchBtn" style="padding":10px 20px;background-color:#28a745;color:white;border:none;border-radius:5px;cursor pointer;">بحث</button>
+</div>
+<script>
+    document.getElementById('searchBtn').onclick=function(){
+        let medicine=document.getElementById('medlnput').value;
+        if(medicine){
+            alert('جاري البحث عن توفر:'+ medicine);
+        }else {
+            alert('من فضلك اكتبي اسم الدواء اولا');
+        }
+    };
+    </script>
