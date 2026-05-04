@@ -90,11 +90,25 @@
                 <b>نظام ربط الصيدليات الذكي:</b> نهدف إلى مساعدة المرضى في العثور على أدويتهم المفقودة بسرعة وسهولة، من خلال توفير قاعدة بيانات موحدة تربط بين مختلف الصيدليات في مكان واحد.
             </p>
         </div>
-    </div>
+  <div id="resultsContainer" style="padding: 20px;"></div> 
 
     <script>
         function searchAction() {
-            alert("بدأنا البحث عن: " + document.getElementById('medName').value);
+        let medicine = document.getElementById('medName').value;
+    let place = document.getElementById('location').value;
+    let container = document.getElementById('resultsContainer');
+
+    container.innerHTML = `
+        <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 600px; margin: 20px auto; border-right: 8px solid #10b981; text-align: right;">
+            <h3 style="color: #1e293b; margin: 0 0 10px 0;">نتائج البحث عن: ${medicine}</h3>
+            <p style="color: #64748b; font-size: 0.9rem;">📍 الحي/المنطقة: ${place}</p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; direction: rtl;">
+                <strong style="color: #2c3e50;">صيدلية النهدي</strong>
+                <span style="color: #10b981; font-weight: bold;">متوفر ✅</span>
+            </div>
+        </div>
+    `;    
         }
     </script>
 
